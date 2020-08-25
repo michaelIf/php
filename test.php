@@ -239,7 +239,13 @@ reverse_r('hello');
 change_line();
 reverse_i('hello');
 
-//class
-
+//class静态方法
+before_case();
+class Math{
+    static function squared($input){
+        return $input*$input;
+    }
+}
+echo Math::squared(8);
 
 ?>
