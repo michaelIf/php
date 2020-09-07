@@ -247,5 +247,13 @@ class Math{
     }
 }
 echo Math::squared(8);
-
+//读取dir
+before_case();
+$path = "/home/jianghong2/phpproject/php/home.php";
+$file1 = basename($path);
+$file2 = basename($path,".php");
+echo $file1;
+change_line();
+echo $file2;
+change_line();
 ?>
