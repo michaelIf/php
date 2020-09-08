@@ -14,10 +14,10 @@
   echo 'File last accessed: '.date('j F Y H:i', fileatime($file)).'<br>';
   echo 'File last modified: '.date('j F Y H:i', filemtime($file)).'<br>';
 
-  //$user = posix_getpwuid(fileowner($file));
+  $user = posix_getpwuid(fileowner($file));
   echo 'File owner: '.$user['name'].'<br>';
 
-  //$group = posix_getgrgid(filegroup($file));  
+  $group = posix_getgrgid(filegroup($file));
   echo 'File group: '.$group['name'].'<br>';
   
   echo 'File permissions: '.decoct(fileperms($file)).'<br>';

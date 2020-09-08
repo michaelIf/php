@@ -249,11 +249,49 @@ class Math{
 echo Math::squared(8);
 //读取dir
 before_case();
-$path = "/home/jianghong2/phpproject/php/home.php";
+$path = "/uploads/home.php";
 $file1 = basename($path);
 $file2 = basename($path,".php");
 echo $file1;
 change_line();
 echo $file2;
 change_line();
+
+// mkdir
+before_case();
+mkdir("/tmp/testing", 0777);
+rmdir("/tmp/testing");
+
+//exec
+before_case();
+exec("ls -la",$result);
+foreach ($result as $line){
+    echo "$line\n";
+}
+change_line();
+$result2 = `ls -la`;
+echo $result2;
+
+//getenv
+before_case();
+$pp = 'test22.php';
+putenv("PHP_SELF=$pp");
+$ss = getenv("PHP_SELF");
+echo $ss;
+
+//timestamp
+before_case();
+$tt = mktime();
+echo $tt;
+change_line();
+$now = getdate();
+print_r($now);
+change_line();
+echo checkdate(2,29,2008);
+change_line();
+echo checkdate(2,29,2007);
+change_line();
+echo strftime('%a');
+
+
 ?>

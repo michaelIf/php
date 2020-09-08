@@ -15,8 +15,8 @@
     //strip out the two entries of . and ..
   	if($file != "." && $file != "..")
   	{
-		//echo '<a href="filedetails.php?file='.$file.'">'.$file.'</a><br>';
-        echo "<li>$file</li>";
+		echo '<a href="filedetails.php?file='.$file.'">'.$file.'</a><br>';
+        //echo "<li>$file</li>";
   	}
   echo '</ul>';
   $dir->close();
