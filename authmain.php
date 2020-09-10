@@ -42,16 +42,17 @@ else{
     else{
         echo 'You are not logged in.<br />';
     }
+    echo '<form method="post" action="authmain.php">';
+    echo '<table>';
+    echo '<tr><td>Userid: </td>';
+    echo '<td><input type="text" name="userid" ></td></tr>';
+    echo '<tr><td>Password:</td>';
+    echo '<td><input type="password" name="password"></td></tr>';
+    echo '<tr><td colspan="2" align="center">';
+    echo '<input type="submit" value="Log in"></td></tr>';
+    echo '</table></form>';
 }
-echo '<form method="post" action="authmain.php">';
-echo '<table>';
-echo '<tr><td>Userid: </td>';
-echo '<td><input type="text" name="userid" ></td></tr>';
-echo '<tr><td>Password:</td>';
-echo '<td><input type="password" name="password"></td></tr>';
-echo '<tr><td colspan="2" align="center">';
-echo '<input type="submit" value="Log in"></td></tr>';
-echo '</table></form>';
+
 
 
 ?>

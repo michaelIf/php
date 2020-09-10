@@ -293,5 +293,51 @@ echo checkdate(2,29,2007);
 change_line();
 echo strftime('%a');
 
+//eval
+before_case();
+eval("echo 'hello world';");
+change_line();
+//exit('bye');
+//die('bye');
+
+//get loaded extensions
+before_case();
+$ext = get_loaded_extensions();
+global $tmp;
+foreach ($ext as $i){
+    echo $i;
+    echo "\n";
+    $ext_fun = get_extension_funcs($i);
+    if(is_array($ext_fun)){
+        foreach ($ext_fun as $j){
+            echo $j;
+            echo "\n";
+        }
+    }
+    else{
+        $tmp = $ext_fun;
+    }
+
+}
+change_line();
+echo '$tmp is '.$tmp;
+
+//get current user
+before_case();
+echo get_current_user();
+
+//get last mod time
+before_case();
+echo date('g:i a,j M Y',getlastmod());
+
+// ini set
+before_case();
+$old_max_execution_time = ini_set('max_execution_time',120);
+echo 'old time out is '.$old_max_execution_time;
+echo "\n";
+$max_execution_time = ini_get('max_execution_time');
+echo 'new time out is '.$max_execution_time;
+
+
 
 ?>
