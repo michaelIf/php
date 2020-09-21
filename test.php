@@ -338,6 +338,16 @@ echo "\n";
 $max_execution_time = ini_get('max_execution_time');
 echo 'new time out is '.$max_execution_time;
 
+// test dump
+before_case();
+$a = 34;
+var_dump($a);
+$a += 1;
+var_dump($a);
+$a *=4;
+var_dump($a);
+
+
 
 
 ?>
